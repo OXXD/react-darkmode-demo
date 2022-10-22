@@ -1,0 +1,134 @@
+:root {
+  --app-color-white: #fff;
+
+  // 颜色规范
+  --app-primary-color: #3f7fff;
+  --app-primary-end-color: #2d38f6;
+  --app-text-color: #31353c;
+  --app-text-second-color: #7e7c82;
+  --app-text-sub-color: #8a8a99;
+  --app-text-sub-second-color: #bebecc;
+  --app-text-link-color: var(--app-primary-color);
+  --app-text-link-second-color: #6b6b6b;
+  --app-divider-color: #eaeaea;
+  --app-background-color: #f5f5f5;
+  --app-page-background-color: var(--app-color-white);
+  --app-navbar-background-color: #ffffff;
+  --app-navbar-text-color: var(--app-text-color);
+  --app-tabbar-background-color: var(--app-color-white);
+  --app-tabbar-text-color: #a8a8a8;
+  --app-tabbar-text-active-color: var(--app-primary-color);
+  --app-tabbar-text-active-gradient-color: linear-gradient(
+    90deg,
+    #3f7fff 0%,
+    #2c36f5 100%
+  );
+  --app-success-color: #32d74b;
+  --app-danger-color: @danger;
+
+  --app-padding-xxl: 22px;
+  --app-padding-xl: 20px;
+  --app-padding-lg: 18px;
+  --app-padding: 16px;
+  --app-padding-md: 12px;
+  --app-padding-sm: 10px;
+  --app-padding-xs: 8px;
+
+  --app-margin-xl: 24px;
+  --app-margin-lg: 20px;
+  --app-margin: 16px;
+  --app-margin-md: 12px;
+  --app-margin-sm: 10px;
+  --app-margin-xs: 8px;
+
+  // Font
+  --app-font-size-xs: 10px;
+  --app-font-size-sm: 12px;
+  --app-font-size-md: 14px;
+  --app-font-size-lg: 16px;
+  --app-font-size-xl: 18px;
+  --app-font-size-xxl: 20px;
+  --app-font-size-xxxl: 24px;
+  --app-font-weight-bold: 500;
+  --app-font-weight-bold-lg: 600;
+  --app-font-weight-bold-xxxl: 900;
+  --app-line-height-xs: 14px;
+  --app-line-height-sm: 18px;
+  --app-line-height-md: 20px;
+  --app-line-height-lg: 22px;
+  --app-line-height-xl: 24px;
+  --app-line-height-xxl: 26px;
+  --app-icon-size: 20px;
+  --app-icon-size-sm: 22px;
+  --app-icon-size-md: 24px;
+
+  // Tab
+  --app-tab-height: 31px;
+  --app-tab-background-color: var(--app-navbar-background-color);
+  --app-tab-text-color: #62626b;
+  --app-tab-text-active-color: var(--app-text-color);
+
+  // MessageCard
+  --app-message-card-background: var(--app-navbar-background-color);
+  --app-message-card-text-time-color: #999;
+
+  // Popup
+  --app-popup-background: var(--app-navbar-background-color);
+
+  // Button
+  --app-button-sm-height: 24px;
+  --app-button-sm-border-radius: @border-radius-md;
+
+  // Tag
+  --app-tag-background-color: #eaeaea;
+  --app-tag-text-color: var(--app-text-second-color);
+
+  --app-message-list-background-color: var(--app-navbar-background-color);
+
+  --app-user-member-card-background-color: #fefcf7;
+  --app-user-member-card-border-color: #e2cb99;
+  --app-user-member-card-text-color: #c79b44;
+  --app-user-member-card-text-second-color: #ad873c;
+  --app-user-member-card-icon-color: #f9f1e4;
+
+  // Switch
+  --app-switch-active-color: var(--app-success-color);
+  --app-switch-inactive-color: rgba(120, 120, 128, 0.16);
+}
+
+:root[data-theme='dark'] {
+  // 颜色规范
+  --app-primary-color: #3f7fff;
+  --app-primary-end-color: #2d38f6;
+  --app-text-color: #ffffff;
+  --app-text-second-color: #86878b;
+  --app-text-sub-color: #76727d;
+  --app-text-sub-second-color: #bebecc;
+  --app-text-link-color: var(--app-primary-color);
+  --app-text-link-second-color: var(--app-text-second-color);
+  --app-divider-color: #404141;
+  --app-background-color: #151619;
+  --app-page-background-color: #25272f;
+  --app-navbar-background-color: #25272f;
+  --app-navbar-text-color: var(--app-text-color);
+  --app-tabbar-background-color: #23242e;
+  --app-tabbar-text-color: #62626b;
+
+  // Tab
+  --app-tab-text-color: #979797;
+
+  // MessageCard
+  --app-message-card-text-time-color: #ccc;
+
+  // Tag
+  --app-tag-background-color: #373c4a;
+
+  --app-user-member-card-background-color: #1e1c1a;
+  --app-user-member-card-border-color: #79602f;
+  --app-user-member-card-text-color: #f9dea2;
+  --app-user-member-card-text-second-color: #c39f56;
+  --app-user-member-card-icon-color: #342c20;
+
+  // Switch
+  --app-switch-inactive-color: rgba(120, 120, 128, 0.32);
+}

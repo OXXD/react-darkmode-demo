@@ -1,0 +1,33 @@
+@import '@/styles/variables.less';
+
+.page {
+  // min-height: calc(100vh - var(--rv-tabbar-height));
+  &.is-padding-tabbar {
+    padding-bottom: var(--rv-tabbar-height);
+  }
+
+  &.is-full-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: @page-background-color;
+    .page-content {
+      flex: 1;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: space-between;
+    }
+  }
+
+  &-content {
+    padding: @padding;
+    &.is-background {
+      background-color: @navbar-background-color;
+    }
+    &.is-flex {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

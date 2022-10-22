@@ -1,0 +1,161 @@
+@import './variables.less';
+
+:root:root {
+  // NavBar
+  --rv-nav-bar-height: 44px;
+  --rv-nav-bar-background-color: var(--app-navbar-background-color);
+  --rv-nav-bar-title-text-color: var(--app-navbar-text-color);
+  --rv-nav-bar-icon-color: var(--app-navbar-text-color);
+  --rv-nav-bar-text-color: @text-color;
+
+  // TabBar
+  --rv-tabbar-background-color: var(--app-tabbar-background-color);
+  --rv-tabbar-item-text-color: var(--app-tabbar-text-color);
+  --rv-tabbar-item-active-color: var(--app-tabbar-text-active-color);
+  --rv-tabbar-item-active-background-color: var(
+    --app-tabbar-text-active-gradient-color
+  );
+
+  // Popup
+  --rv-popup-background-color: var(--app-popup-background);
+  .rv-popup {
+    &--top.app-popup {
+      top: var(--rv-nav-bar-height); //
+      &.is-tab-top {
+        top: calc(var(--rv-nav-bar-height) + var(--app-tab-height));
+      }
+    }
+  }
+
+  // Button
+  --rv-button-plain-background-color: transparent;
+  --rv-button-border-radius: @border-radius-lg;
+  --rv-button-mini-padding: 0 @padding-xs;
+
+  // Search
+  --rv-search-background-color: transparent;
+  --rv-search-content-background-color: @navbar-background-color;
+  --rv-search-label-color: @text-color;
+  --rv-search-left-icon-color: @text-color;
+  --rv-search-action-text-color: @text-color;
+  --rv-search-padding: 0;
+  --rv-search-input-height: 39px;
+  --rv-field-input-text-color: @text-color;
+  .rv-search {
+    &__action {
+      &:active {
+        background-color: transparent;
+      }
+    }
+
+    &__content {
+      border-radius: @border-radius-md-1;
+    }
+
+    .rv-cell {
+      --rv-cell-line-height: 30px;
+      --rv-cell-font-size: @font-size-md;
+      --rv-cell-icon-size: @font-size-xxl;
+      --rv-field-clear-icon-size: @font-size-xxl;
+      // line-height: 30px;
+      &__left-icon {
+        // line-height: 30px;
+      }
+
+      &__value {
+        color: @text-color;
+        &--alone {
+          color: @text-color;
+        }
+      }
+    }
+  }
+  // Tag
+  --rv-tag-padding: 1px @padding-xs;
+  --rv-tag-line-height: @line-height-md;
+
+  // Cell
+  --rv-cell-group-inset-padding: 0;
+  --rv-cell-text-color: @text-color;
+  --rv-cell-background-color: @navbar-background-color;
+  --rv-cell-group-background-color: @navbar-background-color;
+  --rv-cell-border-color: @border-color;
+  --rv-cell-vertical-padding: @padding-lg;
+  --rv-cell-font-size: @font-size-lg;
+  --rv-cell-icon-size: @font-size-lg;
+  .rv-cell {
+    &__title {
+      min-width: 0;
+    }
+  }
+
+  // Input
+  --rv-input-text-color: @text-color;
+
+  // Dialog
+  --rv-dialog-background-color: @navbar-background-color;
+  --rv-button-default-background-color: @navbar-background-color;
+  --rv-button-default-color: @text-color;
+  --rv-dialog-confirm-button-text-color: @primary-color;
+  --rv-dialog-border-radius: @border-radius-lg;
+  --rv-dialog-header-padding-top: 32px;
+  --rv-dialog-font-size: @font-size-lg;
+  --rv-dialog-message-padding: 32px;
+  --rv-dialog-message-font-size: @font-size-lg;
+  --rv-dialog-message-line-height: @line-height-xl;
+  --rv-dialog-has-title-message-text-color: @text-second-color;
+  .rv-dialog {
+    --rv-gray-3: var(--app-divider-color);
+  }
+
+  // Divider
+  --rv-divider-font-size: @font-size-xs;
+
+  // Checkbox
+  --rv-checkbox-label-color: @text-color;
+
+  // Dropdown
+  --rv-dropdown-menu-background-color: @navbar-background-color;
+  --rv-dropdown-menu-title-text-color: @text-color;
+  --rv-dropdown-menu-title-active-text-color: @text-color;
+  --rv-dropdown-menu-option-active-color: @primary-color;
+
+  // Tab
+  --rv-tab-text-color: @text-second-color;
+  --rv-tab-active-text-color: @text-color;
+  --rv-tabs-nav-background-color: @navbar-background-color;
+  --rv-tabs-bottom-bar-width: 20px;
+  --rv-tabs-bottom-bar-color: @primary-color;
+  --rv-tab-font-size: @font-size-lg;
+  .rv-tabs {
+    &.has-nav-right {
+      .rv-tabs__wrap {
+        position: fixed;
+        top: var(--rv-nav-bar-height);
+        right: 0;
+        left: 0;
+        z-index: var(--rv-sticky-z-index);
+      }
+      .rv-tabs__nav {
+        margin-right: 50px;
+      }
+      .rv-sticky {
+        transform: none !important; // 在 iOS Safari 上首次打开样式问题
+      }
+    }
+  }
+  .rv-tab {
+    &--active {
+      font-weight: @font-weight-bold-lg;
+    }
+  }
+}
+
+:root:root[data-theme='dark'] {
+  // // TabBar
+  // --rv-tabbar-background-color: var(--app-tabbar-background-color);
+  // --rv-tabbar-item-text-color: var(--app-tabbar-text-color);
+
+  // Cell
+  --rv-cell-active-color: var(--app-tabbar-text-color);
+}
